@@ -93,13 +93,8 @@
   </template>
   
   <script>
-  import StarRating from '@/vue-star-ratings.js'
-  
   export default {
     name: "AddressForm",
-    components: {
-        StarRating
-    },
   
     data() {
       return {
