@@ -14,13 +14,14 @@
     <div class="buttonBlock">
       <center>
         <div class="button">
-            <router-link to="/revsubformview"><prettyButton @click="handleClick" :disabled="isDisabled">Submit a Review</prettyButton></router-link>
-        </div>
-        <div class="button">
-            <router-link to="/userReviews"><prettyButton @click="handleClick" :disabled="isDisabled">Read Reviews</prettyButton></router-link>
+            <router-link to="/homepage/revsubformview"><prettyButton :disabled="isDisabled" style="margin-right: 2em">Submit a Review</prettyButton></router-link>
+            <router-link to="/userReviews"><prettyButton :disabled="isDisabled">Read Reviews</prettyButton></router-link>
         </div>
     </center>
     </div>
+
+    <!-- three blocks with info text horizontally aligned -->
+    
 
 </template>
 

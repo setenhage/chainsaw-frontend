@@ -1,8 +1,8 @@
 <template>
     <div>
         <div class="menuBar">
-            <img src="../assets/logo.png" alt="logo" width="150" height="50">
-            <router-link to="/revsubformview"><button class="menuButton">Submit</button></router-link>
+            <img src="../assets/logo.png" alt="logo" width="120" height="50">
+            <router-link to="/homepage/revsubformview"><button class="menuButton">Submit</button></router-link>
             <router-link to="/userReviews"><button class="menuButton">Reviews</button></router-link>
             <router-link to="/login"><button class="menuButton">Login</button></router-link>
             <router-link to="/about"><button class="menuButton">About</button></router-link>
