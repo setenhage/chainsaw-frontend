@@ -32,7 +32,7 @@
     border: none;
     cursor: pointer;
     outline: none;
-    border-radius: 5px;
+    border-radius: 0px;
     transition: background-color 0.3s ease;
   }
   
@@ -42,20 +42,20 @@
   }
   
   .pretty-button.primary {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #eee525ff;
+    color: black;
   }
   
   .pretty-button.primary:hover {
-    background-color: #45a049;
+    background-color: rgb(255, 254, 231);
   }
   
   .pretty-button.secondary {
-    background-color: #008CBA;
+    background-color: #7b886aff;
     color: white;
   }
   
   .pretty-button.secondary:hover {
-    background-color: #007bb5;
+    background-color: #eee525ff;
   }
   </style>
