@@ -1,5 +1,4 @@
 <template>
-    <h1> Submit your review </h1>
     <div id="app">
     <RevSubForm/>
   </div>
@@ -9,7 +8,7 @@
 <script>
 import RevSubForm from "../components/RevSubForm.vue";
 export default {
-  name: "revSubForm",
+  name: "revSubFormView",
   components: {
     RevSubForm
   }
