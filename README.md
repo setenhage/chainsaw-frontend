@@ -6,4 +6,3 @@
 3. update to right version: npm i vue@3.2.26
 4. run: npm install
 5. run: npm run serve
-   

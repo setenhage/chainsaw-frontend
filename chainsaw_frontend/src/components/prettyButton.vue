@@ -29,10 +29,13 @@
   .pretty-button {
     padding: 10px 20px;
     font-size: 30px;
+    font-weight: 500;
+    font-family: 'Arial';
+    color: rgb(30, 30, 30);
     border: none;
     cursor: pointer;
-    outline: none;
-    border-radius: 0px;
+    outline: 2px solid transparent;
+    border-radius: 2px;
     transition: background-color 0.3s ease;
   }
   
@@ -42,12 +45,13 @@
   }
   
   .pretty-button.primary {
-    background-color: #eee525ff;
-    color: black;
+    background-color: rgb(255, 255, 213);
+    color: rgb(30, 30, 30);
+    font-family: 'Arial';
   }
   
   .pretty-button.primary:hover {
-    background-color: rgb(255, 254, 231);
+    background-color: rgb(255, 255, 255);
   }
   
   .pretty-button.secondary {
