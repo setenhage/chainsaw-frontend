@@ -3,13 +3,18 @@
 
     <div>
         <div class="menuBar">
-            <!-- <router-link to="/homepage"><img src="../assets/logo.png" class="logo"></router-link> -->
-            <!-- <router-link to="/homepage"><button class="menuHomeButton" font-size="60">landlord</button></router-link> -->
+            <router-link to="/homepage"><img src="../assets/logo.png" class="logo"></router-link>
             <router-link to="/homepage/revsubformview"><button class="menuButton">Informeer Anderen</button></router-link>
             <router-link to="/userReviews"><button class="menuButton">Informeer Jezelf</button></router-link>
-            <router-link to="/about"><button class="menuButton">Wat is dit?</button></router-link>
+            <router-link to="/aboutpage"><button class="menuButton">Wat is dit?</button></router-link>
             <!-- <router-link to="/login"><button class="menuLoginButton">Login</button></router-link> -->
         </div>
+
+        </div>
+
+        <!-- horizontal divider line (black line of 1px height) along the whole page below the menubar -->
+        <div class="dividerLine">
+
     </div>
 
 </template>
@@ -21,6 +26,15 @@ export default {
 </script>
 
 <style scoped>
+.dividerLine {
+    background-color: black;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0%;
+}
+
 .menuBar {
     display: flex;
     background-color: rgb(255, 213, 0);
@@ -69,9 +83,9 @@ export default {
 
 /* logo image in top left of menubar */
 .logo {
-    width: 100px;
-    height: 80%0px;
-    margin: 10px 10px 10px 10px;
+    width: 60px;
+    height: 50px;
+    margin: 20px 0px 10px -500px;
     padding: 0px;
     float: left;
     background-color: transparent;

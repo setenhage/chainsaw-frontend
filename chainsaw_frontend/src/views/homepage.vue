@@ -16,7 +16,7 @@
         </div>
 
         <div class="buttonContainer" style="left: -300px; top: 160px; padding: 140px 0px 0px 400px;">
-          <prettyButton class="pretty-button primary" @click="onClick">Beoordeel Mee</prettyButton>
+          <router-link to="/homepage/revsubformview"><prettyButton class="pretty-button primary" @click="onClick">Beoordeel Mee</prettyButton></router-link>
         </div>
       </div>
 
