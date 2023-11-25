@@ -1,48 +1,36 @@
-<template>    
-      <menuBar></menuBar>
+<template>
 
     <div class="contentBox">
 
-      <div class="imageBlock">
-        <center>
-          <img src="../assets/landlord.jpg" alt="landlord" style="width: 100%; height: 100%"/>
-        </center>
-      </div>
-
-      <!-- <div class="whiteBlock">
-        <div class="infoBlock">
-          <h1>Rate and Review your Landlord </h1>
-          <p>Chainsaw allows tenants to share their experiences and rate their landlords. 
-            It provides a platform for tenants to provide feedback and help others 
-            make informed decisions when choosing a place to live.</p>
-        </div>  
-        <div class="buttonContainer">
-          <router-link to="/homepage/revsubformview"><prettyButton :disabled="isDisabled" style="margin-right: 2em">Submit a Review</prettyButton></router-link>
-          <router-link to="/userReviews"><prettyButton :disabled="isDisabled">Read Reviews</prettyButton></router-link>
+      <!-- large yellow block fills the top half of the page -->
+      <div class="yellowBlock">
+        <div class="imageBlock" style="left: 200px; top: 220px">
+          <img src="../assets/appartment.png" alt="logo" class="logo">
         </div>
-      </div> -->
 
-      <div class="greyBlock">
-        <div class="infoBlock">
-          <h1>Rate your Landlord</h1>
-          <p>Chainsaw allows tenants to share their experiences and rate their landlords. 
-            It provides a platform for tenants to provide feedback and help others 
-            make informed decisions when choosing a place to live.</p>
-        </div>  
-        <div class="buttonContainer">
-          <router-link to="/revsubformview"><prettyButton :disabled="isDisabled" style="center">Submit Your Review</prettyButton></router-link>
+        <bigText class="bigText" style="left: -300px; top: 0px">WONEN IS EEN MENSENRECHT</bigText>
+
+        <div class="smallText" style="left: -300px; top: 160px;">
+            <p>Een dak boven je hoofd is een basisrecht. Het is cruciaal om de rechten van alle huurders te beschermen. <br>
+              Grijp de macht, informeer jezelf over verhuurders en woningcorporaties of begin met het indienen van een beoordeling.</p>
+        </div>
+
+        <div class="buttonContainer" style="left: -300px; top: 160px; padding: 140px 0px 0px 400px;">
+          <prettyButton class="pretty-button primary" @click="onClick">Beoordeel Mee</prettyButton>
         </div>
       </div>
 
-      <div class="footer">
-        <center>
-          <p>© 2023 Chainsaw</p>
-        </center>
-      </div>
-
+    <div class="footer" style="font-size: 10px;">
+      <center>
+        <p>© 2023 Chainsaw</p>
+      </center>
     </div>
 
-      <!-- three blocks with info text horizontally aligned -->
+    <menuBar class="menuBar" style="position: fixed;"></menuBar>
+
+
+
+  </div>
     
 </template>
 
@@ -71,12 +59,12 @@ body {
 }
 
 .contentBox {
-  background-color: white;
-  width: 70%;
+  background-color: transparent;
+  width: 100%;
   height: 100%;
   position: absolute;
-  top: 60px;
-  left: 15%;
+  top: 0px;
+  left: 0%;
 }
 
 .imageBlock{
@@ -90,7 +78,7 @@ body {
   height: 30%;
   position: absolute;
   top: 0px;
-  left: 0%;
+  left: 0px;
 }
 
 .whiteBlock {
@@ -109,21 +97,15 @@ body {
     left: 0%;
 }
 
-.infoBlock {
-  width: 80%;
-  height: 50%;
-  top: 10%;
-  left: 10%;
-  position: relative;
-}
-
 .buttonContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   position: relative;
-  top: 20%;
+  height: 0px;
+  width: 500px;
+  margin: 10 auto;
+  padding: 300px 0px 0px 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .greyBlock {
@@ -131,29 +113,78 @@ body {
   flex-direction: column;
   justify-content: left-top;
   align-items: left;
-  background-color: rgb(0, 0, 0, 0.7);
+  background-color: rgb(0, 0, 0, 0.75);
   color: rgb(255, 255, 255);
+  border-radius: 0px;
   padding: 0px;
   text-indent: 0%;
-  width: 40%;
-  height: 31.5%;
+  text-align: center;
+  width: 100%;
+  height: 30%;
   position: absolute;
   top: 250px;
-  left: 50%;
+  left: 0%;
 }
 
+.yellowBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: left-top;
+  align-items: center;
+  background-color: rgb(255, 213, 0);
+  color: rgb(30, 30, 30);
+  border-radius: 0px;
+  padding: 0px;
+  text-indent: 0%;
+  text-align: center;
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  top: 0px;
+  left: 0%;
+}
 
+.bigText {
+  font-family: 'Arial';
+  font-size: 50px;
+  font-weight: 1000;
+  text-align: left;
+  position: relative;
+  color: rgb(30, 30, 30);
+  height: 0px;
+  width: 400px;
+  margin: 10 auto;
+  padding: 300px 0px 0px 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.smallText {
+  font-family: 'Arial';
+  font-size: 20px;
+  font-weight: 1000;
+  text-align: left;
+  position: relative;
+  color: rgb(30, 30, 30);
+  height: 0px;
+  width: 400px;
+  margin: 10 auto;
+  padding: 20px 0px 0px 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
 .footer {
   background-color: rgb(30, 30, 30);
   color: white;
   padding: 0px;
   width: 100%;
-  height: 100px;
-  position: absolute;
+  height: 30px;
+  position: fixed;
   bottom: 0;
   left: 0;
 }
-
 
 </style>
