@@ -2,6 +2,7 @@ import {createRouter, createWebHistory} from 'vue-router'
 
 import homePage from "../views/homepage"
 import revSubFormView from "../views/revsubformview"
+import aboutUs from "../views/aboutus.vue"
 
 const routes = [
     {
@@ -13,6 +14,11 @@ const routes = [
       path: '/homepage/revsubformview',
       name: 'revSubFormView',
       component: revSubFormView
+    },
+    {
+      path: '/homepage/about',
+      name: 'aboutUs',
+      component: aboutUs
     }
   ]
 
