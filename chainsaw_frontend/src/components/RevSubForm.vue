@@ -4,39 +4,40 @@
 
       <hr/>
 
-    <form @submit="handleSubmit">
+    <form @submit.prevent="postAddress">
       <input
         type="text"
         name="street"
         placeholder="Street name and house number (+ suffix)"
-        v-model="street"
+        v-model="addressData.street"
       />
 
       <input
         type="text"
         name="city"
         placeholder="City"
-        v-model="city"
+        v-model="addressData.city"
       />
 
       <input
         type="text"
         name="state"
         placeholder="Province"
-        v-model="state"
+        v-model="addressData.state"
       />
 
       <input
         type="text"
         name="zip"
         placeholder="Postal code"
-        v-model="zip"
+        v-model="addressData.zip"
       />
 
       <input
         type="number"
         name="rent_price"
         placeholder="Rent price (optional)"
+        v-model="addressData.rent_price"
       />
 
       <div class="rating">
@@ -87,33 +88,45 @@
 
       <button type="submit">Submit</button>
     </form>
-  
-
     </div>
   </template>
   
   <script>
+ import axios from 'axios';
+
+
   export default {
     name: "AddressForm",
   
     data() {
       return {
-        street: "",
-        city: "",
-        state: "",
-        zip: "",
-        rent_price: "",
+        addressData: {
+          street: "",
+          city: "",
+          state: "",
+          zip: "",
+          rent_price: "",
+        }
       };
     },
   
     methods: {
-      handleSubmit(event) {
-        event.preventDefault();
-  
-        // Validate the form data
-  
-        // Submit the form data to your API
-      },
+      // async handleSubmit(event) {
+      //   event.preventDefault();
+      //   console.log(this.addressData)
+      //   this.postAddress()
+      // },
+
+      async postAddress() {
+        console.log(this.addressData)
+        try {
+          const response = await axios.post("http://127.0.0.1:8000/address_create/", this.addressData);
+          console.log(response)
+        } catch (e) {
+          console.log('oops')
+          // this.errors.push(e)
+        }
+      }
     },
   };
   </script>
